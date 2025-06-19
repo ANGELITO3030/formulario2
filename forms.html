@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Primer Formulario HTML</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+      }
+
+      .container {
+        background-color: rgb(186, 171, 187);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #8b4d75;
+        outline: none;
+      }
+
+      button {
+        background-color: #8b4d75;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: #a09c9c;
+      }
+
+      .resultado {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #e8f5e8;
+        border-radius: 4px;
+        border-left: 4px solid #4caf50;
+        display: none;
+      }
+
+      .resultado h3 {
+        margin-top: 0;
+        color: #2e7d32;
+      }
+
+      .dato {
+        margin-bottom: 10px;
+        padding: 8px;
+        background-color: white;
+        border-radius: 4px;
+      }
+
+      .etiqueta {
+        font-weight: bold;
+        color: #1976d2;
+
+        
+      }
+   </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📝 Formulario de Registro</h1>
+
+      <!-- FORMULARIO HTML -->
+      <form id="miFormulario">
+        <!-- Campo de texto simple -->
+        <div class="form-group">
+          <label for="nombre">Nombre completo:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            required
+            placeholder="Escribe tu nombre completo"
+            autofocus
+            pattern="[A-za-z ]{3,40}" />
+        </div>
+
+        <!-- Campo de email -->
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="ejemplo@correo.com" />
+        </div>
+
+        <!-- Campo de número -->
+        <div class="form-group">
+          <label for="edad">Edad:</label>
+          <input
+            type="number"
+            id="edad"
+            name="edad"
+            min="18"
+            max="100"
+            required
+            placeholder="Tu edad" />
+        </div>
+
+        <!-- Campo de selección -->
+        <div class="form-group">
+          <label for="ciudad">Ciudad:</label>
+          <select
+            id="ciudad"
+            name="ciudad"
+            required>
+            <option value="">Selecciona tu ciudad</option>
+            <option value="bogota">Bogotá</option>
+            <option value="medellin">Medellín</option>
+            <option value="cali">Cali</option>
+            <option value="barranquilla">Barranquilla</option>
+            <option value="otra">Otra</option>
+          </select>
+        </div>
+
+        <!-- Campos de radio -->
+        <div class="form-group">
+          <label>Experiencia en programación:</label>
+          <input
+            type="radio"
+            id="principiante"
+            name="experiencia"
+            value="principiante"
+            required />
+          <label
+            for="principiante"
+            style="display: inline; margin-left: 5px"
+            >Principiante</label
+          ><br />
+
+          <input
+            type="radio"
+            id="intermedio"
+            name="experiencia"
+            value="intermedio" />
+          <label
+            for="intermedio"
+            style="display: inline; margin-left: 5px"
+            >Intermedio</label
+          ><br />
+
+          <input
+            type="radio"
+            id="avanzado"
+            name="experiencia"
+            value="avanzado" />
+          <label
+            for="avanzado"
+            style="display: inline; margin-left: 5px"
+            >Avanzado</label
+          >
+        </div>
+
+        <!-- Checkbox -->
+        <div class="form-group">
+          <input
+            type="checkbox"
+            id="acepto"
+            name="acepto"
+            required />
+          <label
+            for="acepto"
+            style="display: inline; margin-left: 5px">
+            Acepto los términos y condiciones
+          </label>
+        </div>
+
+        <!-- Área de texto -->
+        <div class="form-group">
+          <label for="comentarios">Comentarios adicionales:</label>
+          <textarea
+            id="comentarios"
+            name="comentarios"
+            rows="4"
+            placeholder="Cuéntanos algo más sobre ti (opcional)"></textarea>
+        </div>
+
+        <!-- Botón de envío -->
+        <button type="submit">🚀 Enviar Formulario</button>
+      </form>
+
+    <br>
+
+
+    <html>
+<!-- Desde aquí cambia el tema a barbería -->
+
+<!-- 1-Input Type Text -->
+
+<form action="">
+  <h2>🙋‍♂️🙋‍♀️¡Cuéntanos sobre ti!</h2>
+  <p>Hola, para que puedas visitar nuestra barbería nos encantaría saber sobre ti:</p>
+    <br>
+    <label for="fname">Tu Nombre:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <br>
+    <label for="lname">Tu Apellido:</label><br>
+    <input type="text" id="lname" name="lname"><br><br>
+    <button type="submit">Guardar</button>
+  </form>
+  
+  <!-- 2-Input Type Button -->
+  
+  <h2>Bienvenidos a Barbería Evezza 💈</h2>
+  <input type="button" onclick="alert('¡Bienvenido a Barbería Evezza! Prepárate para un cambio de look increíble.')" value="👆 Click Para Iniciar">
+  
+  <!-- 3-Input Type Password -->
+  
+  <form action="">
+    <div class="login-container">
+      <h2>🔒 Iniciar Sesión</h2>
+      <label for="email">Id</label>
+      <input type="email" id="email" name="email" placeholder="Ingrese su id" required>
+      <br><br>
+      <label for="password">🗝️ Contraseña:</label>
+      <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+      <button type="submit">Acceder</button>
+    </div>
+  </form>
+  
+  <!-- 4-Input Type Reset -->
+  
+  <form action="">
+    <h2>👤 Datos Personales</h2>
+    <label for="fname">Nombres:</label><br>
+    <input type="text" name="fname-" id="fname-reset" required placeholder="Ingrese sus nombres" autofocus pattern="[A-Za-z ]{3,40}"><br><br>
+    <label for="text">Dirección:</label><br>
+    <input type="text" name="direccion" id="direccion" required placeholder="Ingresa tu dirección"><br><br>
+    <button type="reset">🗑️Limpiar</button>
+    <button type="submit">Guardar</button>
+  </form>
+  
+  <!-- 5-Input Type Checkbox -->
+  
+  <form action="">
+  <br>
+  <label for="nombre">💇‍♂️ ¿Qué servicios prefieres en la barbería?:</label>
+  <div class="opcion">
+    <input type="checkbox" id="corte" name="servicio" value="Corte">
+    <label for="corte">Corte de cabello</label><br>
+    <input type="checkbox" id="barba" name="servicio" value="Barba">
+    <label for="barba">Afeitado de barba</label><br>
+    <input type="checkbox" id="cejas" name="servicio" value="Cejas">
+    <label for="cejas">Perfilado de cejas</label><br>
+    <input type="checkbox" id="tinte" name="servicio" value="Tinte">
+    <label for="tinte">Tinte</label><br>
+    <input type="checkbox" id="keratina" name="servicio" value="Keratina">
+    <label for="keratina">Tratamiento de keratina</label><br>
+    <input type="checkbox" id="hidratacion" name="servicio" value="Hidratacion">
+    <label for="hidratacion">Hidratación capilar</label><br>
+    <input type="checkbox" id="masaje" name="servicio" value="Masaje">
+    <label for="masaje">Masaje capilar</label>
+  </div>
+  <br>
+  <button type="submit">Guardar</button>
+  </form>
+  <br>
+  
+  <!-- 6-Input Type Color -->
+  
+  <form action="">
+    <h2>🌈 Color De Tinte</h2>
+    <p>En nuestra barbería puedes elegir el color de tinte que más te guste para personalizar tu estilo</p>
+    <label for="favcolor">Selecciona tu color favorito:</label><br>
+    <input type="color" id="favcolor" name="favcolor" value="#000000" required style="width: 70px; height: 70px;"><br><br>
+    <button type="submit">Guardar</button>
+  </form>
+  
+  <!-- 7-Input Type Month -->
+  
+  <form action="">
+    <h2>📆 Mes y Año</h2>
+    <label for="mesAnio">¿Cuándo fue tu última visita a la barbería?</label><br>
+    <input type="month" id="mesAnio" name="mesAnio" required style="width: 180px; height: 40px;"><br><br>
+    <button type="submit">Guardar</button>
+  </form>
+  
+  <!-- 8-Input Type Submit -->
+  
+  <form action="" onsubmit="confirmarCita(event)">
+    <h2>✂️ Agendar Cita</h2>
+    <div class="form-group">
+      <label for="nombre_servicio">Servicio deseado:</label><br>
+      <input type="text" id="nombre_servicio" name="nombre_servicio" required><br><br>
+      <label for="precio">Precio aproximado (COP):</label><br>
+      <select id="precio" name="precio" required>
+        <option value="">Selecciona el tipo</option>
+        <option value="15000">15.000 "Corte"</option>
+        <option value="30000">30.000 "Corte + Barba"</option>
+        <option value="50000">50.000 "Full Servicio"</option>
+      </select><br><br>
+      <button type="submit">📤 Confirmar</button>
+    </div>
+  </form>
+  
+  <script>
+  function confirmarCita(event) {
+    event.preventDefault();
+    alert('¡Tu cita en la barbería ha sido agendada!');
+  }
+  </script>
+  
+  <!-- 9-Input Type Time -->
+  
+  <form action="">
+    <h2>🕑 Hora de tu cita</h2>
+    <label for="appt">¿A qué hora prefieres tu corte?</label>
+    <input type="time" id="appt" name="appt">
+    <button type="submit">Guardar</button>
+  </form>
+  
+  <!-- 10-Input Type Radio -->
+  
+  <form action="">
+    <h2>💈 Elige tu estilo de corte</h2>
+    <p>Selecciona tu tipo de corte favorito:</p>
+    <input type="radio" id="fade" name="corte" value="Fade" required>
+    <label for="fade">Fade</label><br>
+    <input type="radio" id="clasico" name="corte" value="Clasico">
+    <label for="clasico">Clásico</label><br>
+    <input type="radio" id="moderno" name="corte" value="Moderno">
+    <label for="moderno">Moderno</label><br>
+    <input type="radio" id="personalizado" name="corte" value="Personalizado">
+    <label for="personalizado">Personalizado</label><br><br>
+    <button type="submit">Guardar</button>
+  </form>
+  
+  <!-- 11-Input Type Range -->
+  
+  <form action="">
+    <h2>🧴 Nivel de tratamiento capilar</h2>
+    <label for="vol">Intensidad (0 a 100):</label>
+    <input type="range" id="vol" name="vol" min="0" max="100">
+    <button type="submit">Guardar</button>
+  </form>
+  
+  <!-- 12-Input Type Number -->
+  
+  <form action="">
+    <h2>0️⃣ Número de servicios</h2>
+    <label for="quantity">Selecciona cuántos servicios deseas:</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="5">
+    <button type="submit">Guardar</button>
+  </form>
+  
+  <!-- 13-Input Type Image -->
+  
+  <form action="">
+    <h2>📷 Confirmar con Imagen</h2>
+    <p>Para confirmar tu cita, por favor introduce tu nombre y apellido:</p>
+    <div class="form-group">
+      <label for="fname">Nombre: </label>
+      <input type="text" id="fname-img" name="fname-img"><br><br>
+      <label for="lname">Apellido: </label>
+      <input type="text" id="lname-img" name="lname"><br><br>
+      <input type="image" src="_img/but.png" alt="Submit" class="btn-imagen" width="45" height="45">
+    </div>
+  </form>
+  
+  <!-- 14-Input Type Date -->
+  
+  <form action="">
+    <h2>📅 Fecha Especial</h2>
+    <p>¿Es tu cumpleaños? Obtendrás un 10% de descuento en tu corte</p>
+    <label for="birthday">🎉 Selecciona tu fecha de cumpleaños:</label><br>
+    <input type="date" id="birthday" name="birthday" required><br><br>
+    <button type="submit">Guardar</button>
+  </form>
+  
+  <!-- 15-Input Type Email -->
+  
+  <form action=""><br>
+    <h2>📧 Correo Electrónico</h2>
+    <label for="email">Confirma tu correo para recibir recordatorios de tu cita:</label><br>
+    <input type="email" name="email" id="email-field" required placeholder="Ingrese su correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+    <button type="submit">Guardar</button>
+  </form>
+  
+  <!-- 16-Input Type Tel -->
+  
+  <form action="">
+    <h2>📞 Teléfono</h2>
+    <label for="phone">Ingresa tu número para contactarte si surge algo:</label><br><br>
+    <input type="tel" id="phone" name="phone" placeholder="312-456-6789" pattern="3\d{2}-\d{3}-\d{4}" required><br><br>
+    <small>Formato: 312-456-6789</small><br><br>
+    <button type="submit">Guardar</button>
+  </form>
+  
+  <!-- 17-Input Type File -->
+  
+  <form action="" enctype="multipart/form-data">
+    <h2>⏳ Subir Archivo</h2>
+    <div class="form-group">
+      <label for="myfile">💾 Sube una referencia de estilo:</label>
+      <input type="file" id="myfile" name="myfile" required>
+    </div>
+    <button type="submit">Guardar</button>
+  </form>
+  
+  <!-- 18-Input Type Search -->
+  
+  <h2>🕵️ Búsqueda</h2>
+  <p>¿Tienes dudas sobre nuestros estilos? ¡Búscalo!</p>
+  <form action="https://www.google.com/search" method="get">
+    <input type="search" name="q" placeholder="Busca estilos de corte">
+    <button type="submit">Buscar</button>
+  </form>
+  
+  <!-- 19-Input Type Week -->
+  
+  <form action="">
+    <h2>📅 Semana de Citas</h2>
+    <label for="week">Selecciona la semana en la que planeas visitar la barbería:</label>
+    <input type="week" id="week" name="semana_citas" required>
+    <button type="submit">Guardar</button>
+  </form>
+  
+  <!-- 20-Input Type URL -->
+  
+  <form action="">
+    <h2>🔗 Comparte tu Estilo Favorito</h2>
+    <p>¿Tienes un estilo que te inspira? Compártelo con nosotros:</p>
+    <label for="homepage">🔗 Enlace del estilo:</label>
+    <input type="url" id="homepage" name="homepage" placeholder="https://ejemplo.com">
+    <button type="submit">Guardar</button>
+  </form>
+  
+  </script>
+  </body>
+</html>
+
+
+
+
+  
